@@ -57,6 +57,10 @@ void test_advanced() {
         auto s = fto.zip(fto.reverse()).map(F(_.first.x * _.second.x)).sum(); // 0x33 11x22 22x11 33x00
         VALUE(s) EXPECTED(22 * 11 * 2);
     }
+    {
+       auto v = fto._attr(x).sum();
+       VALUE(v) EXPECTED(66);
+    }
 }
 
 class Interface {

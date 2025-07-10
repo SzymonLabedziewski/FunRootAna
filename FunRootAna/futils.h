@@ -62,6 +62,7 @@ struct StatInfo {
 
 #define _filter(CODE) filter([]([[maybe_unused]] const auto &_) { return CODE; })
 #define _map(CODE) map([]([[maybe_unused]] const auto &_) { return CODE; })
+#define _attr(CODE) map([]([[maybe_unused]] const auto &_) { return _.CODE; })
 #define _count(CODE) count([]([[maybe_unused]] const auto &_) { return CODE; })
 #define _contains(CODE) contains([]([[maybe_unused]] const auto &_) { return CODE; })
 #define _all(CODE) all([]([[maybe_unused]] const auto &_) { return CODE; })
